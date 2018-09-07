@@ -1,0 +1,22 @@
+mix phoenix.new openebs_dashboard_api
+mix phoenix.gen.html project gitlab_project name:string ssh_url_to_repo:string http_url_to_repo:string
+
+-------------------------------------------
+dpkg -l | grep postgres
+sudo rm -rf /var/lib/postgresql/
+sudo rm -rf /var/log/postgresql/
+sudo rm -rf /etc/postgresql/
+ps aux | grep postgres
+
+We are all set! Run your Phoenix application:
+
+    $ cd openebs_dashboard_api
+    $ mix phoenix.server
+
+You can also run your app inside IEx (Interactive Elixir) as:
+
+    $ iex -S mix phoenix.server
+
+Before moving on, configure your database in config/dev.exs and run:
+
+    $ mix ecto.create

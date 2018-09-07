@@ -1,0 +1,6 @@
+<h2>New projects</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: projects_path(@conn, :create) %>
+
+<span><%= link "Back", to: projects_path(@conn, :index) %></span>

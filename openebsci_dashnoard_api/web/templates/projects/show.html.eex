@@ -1,0 +1,23 @@
+<h2>Show projects</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @projects.name %>
+  </li>
+
+  <li>
+    <strong>Ssh url to repo:</strong>
+    <%= @projects.ssh_url_to_repo %>
+  </li>
+
+  <li>
+    <strong>Http url to repo:</strong>
+    <%= @projects.http_url_to_repo %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: projects_path(@conn, :edit, @projects) %></span>
+<span><%= link "Back", to: projects_path(@conn, :index) %></span>

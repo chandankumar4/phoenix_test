@@ -1,0 +1,30 @@
+<h2>Listing projects</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Ssh url to repo</th>
+      <th>Http url to repo</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for projects <- @projects do %>
+    <tr>
+      <td><%= projects.name %></td>
+      <td><%= projects.ssh_url_to_repo %></td>
+      <td><%= projects.http_url_to_repo %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: projects_path(@conn, :show, projects), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: projects_path(@conn, :edit, projects), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: projects_path(@conn, :delete, projects), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New projects", to: projects_path(@conn, :new) %></span>
