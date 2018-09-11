@@ -15,5 +15,4 @@ defmodule OpenebsciDashnoardApi.ProjectsView do
       ssh_url_to_repo: projects.ssh_url_to_repo,
       http_url_to_repo: projects.http_url_to_repo}
   end
-
 end

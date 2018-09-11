@@ -7,7 +7,7 @@ config :openebsci_dashnoard_api, OpenebsciDashnoardApi.Endpoint,
   server: false
 
 # Print only warnings and errors during test
-config :logger, level: :warn
+config :logger, level: :info
 
 # Configure your database
 config :openebsci_dashnoard_api, OpenebsciDashnoardApi.Repo,
