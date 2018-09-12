@@ -20,7 +20,7 @@ defmodule OpenebsciDashnoardApi.Mixfile do
   def application do
     [
       mod: {OpenebsciDashnoardApi, []},
-      extra_applications: [:logger]
+      extra_applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext, :phoenix_ecto, :postgrex]
     ]
   end
 
@@ -40,8 +40,12 @@ defmodule OpenebsciDashnoardApi.Mixfile do
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
-      {:quantum, ">= 2.1.0"},
-      {:cowboy, "~> 1.0"}
+      {:cowboy, "~> 1.0"},
+      {:mix_test_watch, "~> 0.3", only: :dev, runtime: false},
+      {:quantum, ">= 2.3.3"},
+      {:timex, "~> 3.0"},
+      {:ecto_conditionals, "~> 0.1.0"},
+      {:export, "~> 0.1.1"}
     ]
   end
 

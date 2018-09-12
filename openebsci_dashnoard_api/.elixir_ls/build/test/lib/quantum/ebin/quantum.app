@@ -10,6 +10,7 @@
                         'Elixir.Quantum.DateLibrary',
                         'Elixir.Quantum.DateLibrary.InvalidDateTimeForTimezoneError',
                         'Elixir.Quantum.DateLibrary.InvalidTimezoneError',
+                        'Elixir.Quantum.DateLibrary.Timex',
                         'Elixir.Quantum.ExecutionBroadcaster',
                         'Elixir.Quantum.ExecutionBroadcaster.InitOpts',
                         'Elixir.Quantum.ExecutionBroadcaster.JobInPastError',

@@ -1,5 +1,6 @@
 defmodule OpenebsciDashnoardApi.Router do
   use OpenebsciDashnoardApi.Web, :router
+  require Logger
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -22,6 +23,10 @@ defmodule OpenebsciDashnoardApi.Router do
   # Other scopes may use custom stacks.
   scope "/api", OpenebsciDashnoardApi do
     pipe_through :api
-    resources "/", ProjectsController
+    resources "/", ProjectsController, except: [:new, :edit]
+    resources "/", SourceKeyProjectsController, except: [:new, :edit]
+    Logger.info "testtesttes"
+    Logger.debug "testtesttes"
+    Logger.warn "knob turned too far to the right"
   end
 end
